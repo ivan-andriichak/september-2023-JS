@@ -56,7 +56,7 @@
 //
 // firstName = prompt('your first name');
 // middleName = prompt('your middle name');
-// lastName = prompt('your last name');
+// age = +prompt('your age',30)
 
 
 
