@@ -16,7 +16,7 @@
 // побудувати структуру по шаблону
 // Масив:
 //
-    let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
+//     let listOfItems = ['html', 'css', 'javascript', 'mysql', 'mongodb', 'react', 'angular', 'node.js'];
 //
 // ШАБЛОН:
 //     <ul>
@@ -117,3 +117,285 @@
 // console.log('Users with status true:', trueStatusUsers);
 // console.log('Users with status false:', falseStatusUsers);
 // console.log('Users older than 30:', olderThan30Users);
+// ____________________________________________________________________
+// Additional tasks
+// _______________________________________________________________________
+// --створити масив з:
+//     - з 5 числових значень
+// - з 5 стічкових значень
+// - з 5 значень стрічкового, числового та булевого типу
+// - та вивести його в консоль
+// let mixedArray = [];
+// for (let i = 0; i < 5; i++) {
+//     mixedArray.push(i);
+//     mixedArray.push(`String ${i+1}`)
+//     mixedArray.push(Math.random() > 0.5);
+// }
+// console.log(mixedArray);
+
+//________________________________________________________________________
+// -- Створити пустий масив. Наповнити його будь-якими значеннями звертаючись до конкретного індексу. Вивести в консоль
+// let emptyArray = [];
+// emptyArray[0] = 'hello';
+// emptyArray[1] = 12;
+// emptyArray[2] = null;
+//
+// for (const value of ["Hello", "World"]) {
+//     emptyArray.push(value);
+// }
+// console.log(emptyArray);
+
+//________________________________________________________________________
+
+// - є масив [2,17,13,6,22,31,45,66,100,-18] :
+// const arr = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18];
+// 1. перебрати його циклом while
+// let i = 0;
+// while (i < arr.length) {
+//     const value = arr[i];
+//     console.log(value);
+//     i +=1;
+// }
+//     2. перебрати його циклом for
+// for (let i = 0; i < arr.length; i++) {
+//     const arrElement = arr[i];
+//     console.log(arrElement);
+// }
+//     3. перебрати циклом while та вивести  числа тільки з непарним індексом
+// let i = 1;
+// while (i < arr.length) {
+//     const value = arr[i];
+//     i +=2;
+//     console.log(value);
+// }
+// console.log(`______________________________________________________________________`)
+// let index = 1;
+// while (index < arr.length) {
+//     if (index % 2 === 1) {
+//         console.log(arr[index]);
+//     }
+//     index++;
+// }
+// 4. перебрати циклом for та вивести  числа тільки з непарним індексом
+// for (let i = 0; i < arr.length; i++) {
+//     const arrElement = arr[i];
+//     if (i % 2 === 1) {
+//     console.log(arrElement);
+//     }
+// }
+// 5. перебрати циклом while та вивести  числа тільки парні  значення
+// let index = 1;
+//
+// while (index < arr.length) {
+//     if (arr[index] % 2 === 0) {
+//         console.log(arr[index]);
+//     }
+//     index++;
+// }
+// 6. перебрати циклом for та вивести  числа тільки парні  значення
+// for (let i = 0; i < arr.length; i++) {
+//     const arrElement = arr[i];
+//     if (arr[i] % 2 === 0) {
+//         console.log(arrElement);
+//     }
+//
+// }
+// 7. замінити кожне число кратне 3 на слово "okten"
+// let index = 0;
+//
+// while (index < arr.length) {
+//     if (arr[index] % 3 === 0) {
+//         arr[index] = "okten";
+//     }
+//     index++;
+// }
+// console.log(arr);
+// arr.forEach((element, index) => {
+//     if (element % 3 === 0) {
+//         arr[index] = "okten";
+//     }
+// });
+//
+// console.log(arr);
+
+// 8. вивести масив в зворотньому порядку.
+// for (let i = arr.length-1; i >= 0; i--) {
+//     const arrElement = arr[i];
+//     console.log(arrElement);
+// }
+// 9. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед)
+// let i = arr.length-1;
+// while (i >= 0) {
+//     const value = arr[i];
+//     console.log(value);
+//     i -=1;
+// }
+//__________________________
+// let i = arr.length-1;
+// while (i >= 0) {
+//     const value = arr[i];
+//     i -=2;
+//     console.log(value);
+// }
+//___________________________
+//  let index = arr.length-1;
+// while (index >= 0) {
+//     if (index % 2 === 1) {
+//         console.log(arr[index]);
+//     }
+//     index--;
+// }
+//_____________________________
+//  for (let i = arr.length-1; i >=0; i--) {
+//     const arrElement = arr[i];
+//     if (i % 2 === 1) {
+//     console.log(arrElement);
+//     }
+// }
+//_____________________________
+// let index = arr.length-1;
+//
+// while (index >= 0) {
+//     if (arr[index] % 2 === 0) {
+//         console.log(arr[index]);
+//     }
+//     index--;
+// }
+//__________________________________
+//  for (let i = arr.length-1; i >=0; i--) {
+//     const arrElement = arr[i];
+//     if (arr[i] % 2 === 0) {
+//         console.log(arrElement);
+//     }
+//
+// }
+//__________________________________
+// let index = arr.length-1;
+//
+// while (index >= 0) {
+//     if (index % 3 === 0) {
+//         arr[index] = "okten";
+//     }
+//     index--;
+// }
+// console.log(arr);
+
+//____________________________________
+// - Створити масив з 10 числових елементів. Вивести в консоль всі його елементи в циклі.
+// const arrayNumber = [22, 45, 67, 55, 99, 12, 2, 4, 6, 44];
+// for (let i = 0; i < arrayNumber.length; i++) {
+//     const arrayElement = arrayNumber[i];
+//     console.log(arrayElement);
+// }
+//______________________________________________________________________________
+
+// - Створити масив з 10 строкрових елементів. Вивести в консоль всі його елементи в циклі.
+// const arrayString = ['st1', 'st2', 'st3', 'st4', 'st5', 'st6', 'st7', 'st8', 'st9', 'st10'];
+// for (const string of arrayString) {
+//     console.log(string);
+// }
+
+// for (let i = 0; i < arrayString.length; i++) {
+//     const arrayStringElement = arrayString[i];
+//     console.log(arrayStringElement);
+// }
+//______________________________________________________________________________
+
+// - Створити масив з 10 елементів будь-якого типу. Вивести в консоль всі його елементи в циклі.
+// const arrayVariousElem = [11, 'asd', null, undefined, true, false, 34, 'okten', [], {}];
+// for (const arrayVariousElemElement of arrayVariousElem) {
+//     console.log(arrayVariousElemElement);
+// }
+
+//______________________________________________________________________________
+// - Створити масив з 10 елементів числового, стірчкового і булевого типу. За допомогою if та typeof вивести тільки булеві елементи
+// const  mixedArray = [12, 22, 45, 'okten', 'asd', true, false, 33, 5, 9];
+// for (const element of  mixedArray) {
+//     if (typeof element === 'boolean') {
+//         console.log( `Boolean types: ${element}`);
+//     }
+// }
+
+//______________________________________________________________________________
+// - Створити масив з 10 елементів числового, стірчкового і булевого типу. За допомогою if та typeof вивести тільки числові елементи
+// const  mixedArray = [12, 22, 45, 'okten', 'asd', true, false, 33, 5, 9];
+
+// for (const [index, element] of mixedArray.entries()) {
+//     if (typeof element === 'number') {
+//         console.log(`Index: ${index}, Number types: ${element}`);
+//     }
+// }
+//______________________________________________________________________________
+// - Створити масив з 10 елементів числового, стрічкового і булевого типу. За допомогою if та typeof вивести тільки рядкові елементи
+// const  mixedArray = [12, 22, 45, 'okten', 'asd', true, false, 33, 5, 9];
+
+// for (const element of  mixedArray) {
+//     if (typeof element === 'string') {
+//         console.log( `String types: ${element}`);
+//     }
+// }
+//______________________________________________________________________________
+// - Створити порожній масив. Наповнити його 10 елементами (різними за типами) через звернення до конкретних індексів. Вивести в консоль всі його елементи в циклі.
+// const array = [];
+// array[0] = 'asd';
+// array[1] = 'okten';
+// array[2] = 1;
+// array[3] = 33;
+// array[4] = 44;
+// array[5] = null;
+// array[6] = true;
+// array[7] = undefined;
+// array[8] = false;
+// array[9] = 'asdasd';
+// for (const arrayElement of array) {
+// }
+// console.log(array);
+
+//______________________________________________________________________________
+// - Створити цикл for на 10  ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+// for (let i = 1; i <= 10; i++) {
+//     console.log(`Current value:  ${i}`);
+//     document.write(`Current value: ${i} <br><br>`)
+// }
+
+//______________________________________________________________________________
+// - Створити цикл for на 100 ітерацій з кроком 1. Вивести поточний номер кроку через console.log та document.write
+// for (let i = 1; i <= 100; i++) {
+//     const arrayElement = i;
+//     console.log(`Current value:  ${arrayElement}`);
+//     document.write(`Current value: ${arrayElement} <br><br>`)
+// }
+//______________________________________________________________________________
+// - Створити цикл for на 100 ітерацій з кроком 2. Вивести поточний номер кроку через console.log та document.write
+// for (let i = 1; i <= 100; i += 2) {
+//     const arrayElement = i;
+//     console.log(`Current value:  ${arrayElement}`);
+//     document.write(`Current value: ${arrayElement} <br><br>`)
+// }
+
+//______________________________________________________________________________
+// - Створити цикл for на 100 ітерацій. Вивести тільки парні кроки. через console.log + document.write
+// for (let i = 1; i <= 100; i += 1) {
+//     if (i % 2 === 0){
+//         const arrayElement = i;
+//         console.log(`Current value:  ${arrayElement}`);
+//         document.write(`Current value: ${arrayElement} <br><br>`)
+//     }
+// }
+
+// - Створити цикл for на 100 ітерацій. Вивести тільки непарні кроки. через console.log + document.write
+// for (let i = 1; i <= 100; i += 1) {
+//     if (i % 2 === 1){
+//         const arrayElement = i;
+//         console.log(`Current value:  ${arrayElement}`);
+//         document.write(`Current value: ${arrayElement} <br><br>`)
+//     }
+// }
+
+//________________________________________________________________________
+// стоврити масив книжок (назва, кількість сторінок, автори , жанри).
+// -знайти наібльшу книжку.
+// - знайти книжку/ки з найбільшою кількістю жанрів
+// - знайти книжку/ки з найдовшою назвою
+// - знайти книжку/ки які писали 2 автори
+// - знайти книжку/ки які писав 1 автор
