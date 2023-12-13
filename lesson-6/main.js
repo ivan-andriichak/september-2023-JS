@@ -140,9 +140,9 @@
 // }
 
 // Визначаємо масиви мастей та значень карт
-// const suits = ['spade', 'diamond', 'heart', 'club'];
-// const values = ['ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'jack', 'queen', 'king'];
-//
+// const suits = ['spades', 'diamonds', 'hearts', 'clubs'];
+// const values = ['ace', '6', '7', '8', '9', '10', 'jack', 'queen', 'king'];
+// //
 // // Створюємо порожній масив для зберігання карт
 // const deckOfCards = [];
 //
@@ -167,13 +167,55 @@
 //         deckOfCards.push(card);
 //     }
 // }
-//
-// // Виводимо масив карт у консоль
+
+// Виводимо масив карт у консоль
 // console.log(deckOfCards);
+//
+// const deckOfCards = [
+//     { cardSuit: 'spades', value: 'ace', color: 'black' },
+//     { cardSuit: 'spades', value: '6', color: 'black' },
+//     { cardSuit: 'spades', value: '7', color: 'black' },
+//     { cardSuit: 'spades', value: '8', color: 'black' },
+//     { cardSuit: 'spades', value: '9', color: 'black' },
+//     { cardSuit: 'spades', value: '10', color: 'black' },
+//     { cardSuit: 'spades', value: 'jack', color: 'black' },
+//     { cardSuit: 'spades', value: 'queen', color: 'black' },
+//     { cardSuit: 'spades', value: 'king', color: 'black' },
+//     { cardSuit: 'diamonds', value: 'ace', color: 'red' },
+//     { cardSuit: 'diamonds', value: '6', color: 'red' },
+//     { cardSuit: 'diamonds', value: '7', color: 'red' },
+//     { cardSuit: 'diamonds', value: '8', color: 'red' },
+//     { cardSuit: 'diamonds', value: '9', color: 'red' },
+//     { cardSuit: 'diamonds', value: '10', color: 'red' },
+//     { cardSuit: 'diamonds', value: 'jack', color: 'red' },
+//     { cardSuit: 'diamonds', value: 'queen', color: 'red' },
+//     { cardSuit: 'diamonds', value: 'king', color: 'red' },
+//     { cardSuit: 'hearts', value: 'ace', color: 'red' },
+//     { cardSuit: 'hearts', value: '6', color: 'red' },
+//     { cardSuit: 'hearts', value: '7', color: 'red' },
+//     { cardSuit: 'hearts', value: '8', color: 'red' },
+//     { cardSuit: 'hearts', value: '9', color: 'red' },
+//     { cardSuit: 'hearts', value: '10', color: 'red' },
+//     { cardSuit: 'hearts', value: 'jack', color: 'red' },
+//     { cardSuit: 'hearts', value: 'queen', color: 'red' },
+//     { cardSuit: 'hearts', value: 'king', color: 'red' },
+//     { cardSuit: 'clubs', value: 'ace', color: 'black' },
+//     { cardSuit: 'clubs', value: '6', color: 'black' },
+//     { cardSuit: 'clubs', value: '7', color: 'black' },
+//     { cardSuit: 'clubs', value: '8', color: 'black' },
+//     { cardSuit: 'clubs', value: '9', color: 'black' },
+//     { cardSuit: 'clubs', value: '10', color: 'black' },
+//     { cardSuit: 'clubs', value: 'jack', color: 'black' },
+//     { cardSuit: 'clubs', value: 'queen', color: 'black' },
+//     { cardSuit: 'clubs', value: 'king', color: 'black' }
+// ];
+//
+// console.log(deckOfCards);
+
 // __________________________________________________________________________________________________
 
 // - знайти піковий туз
-// const pikAce = deckOfCards.find(card => card.cardSuit === 'spade' && card.value === 'ace');
+// const pikAce = deckOfCards.find(card => card.cardSuit === 'spades' && card.value === 'ace');
 //
 // console.log(pikAce);
 // __________________________________________________________________________________________________
@@ -182,7 +224,7 @@
 // const sixes1 = deckOfCards.filter(card => card.value === '6');
 // console.log(sixes1);
 //
-//
+///////////////////////////////////////////////////////////////////
 // const sixes2 = deckOfCards.reduce((acc, card) => {
 //     if (card.value === '6') {
 //         acc.push(card);
@@ -200,7 +242,7 @@
 // __________________________________________________________________________________________________
 
 // - всі буби
-// const diamondCards = deckOfCards.filter(card => card.cardSuit === 'diamond');
+// const diamondCards = deckOfCards.filter(card => card.cardSuit === 'diamonds');
 //
 // console.log(diamondCards);
 
@@ -227,8 +269,14 @@
 //
 //     return result;
 // } , {});
-//
 // console.log(classifySuit);
+// ///////////////////////////////////////////////////////
+// const result = deckOfCards.reduce((acc, item) => {
+//     acc[item.cardSuit].push(item);
+//     return acc;
+// }, { spades: [], diamonds: [], hearts: [], clubs: [] });
+//
+// console.log(result);
 
 ///     взяти з arrays.js (який лежить в папці 2023 plan) масив coursesArray
 // let coursesArray = [
