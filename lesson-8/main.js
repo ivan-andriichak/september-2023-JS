@@ -163,112 +163,110 @@
 
 //     Цикл в циклі
 // - Є масив coursesArray котрий лежить в arrays.js (на цей момент ви вже знаєте де він знаходиться)
-// const coursesArray = [
-//     {
-//         title: 'JavaScript Complex',
-//         monthDuration: 5,
-//         hourDuration: 909,
-//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
-//     },
-//     {
-//         title: 'Java Complex',
-//         monthDuration: 6,
-//         hourDuration: 909,
-//         modules: ['html',
-//             'css',
-//             'js',
-//             'mysql',
-//             'mongodb',
-//             'angular',
-//             'aws',
-//             'docker',
-//             'git',
-//             'java core',
-//             'java advanced']
-//     },
-//     {
-//         title: 'Python Complex',
-//         monthDuration: 6,
-//         hourDuration: 909,
-//         modules: ['html',
-//             'css',
-//             'js',
-//             'mysql',
-//             'mongodb',
-//             'angular',
-//             'aws',
-//             'docker',
-//             'python core',
-//             'python advanced']
-//     },
-//     {
-//         title: 'QA Complex',
-//         monthDuration: 4,
-//         hourDuration: 909,
-//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
-//     },
-//     {
-//         title: 'FullStack',
-//         monthDuration: 7,
-//         hourDuration: 909,
-//         modules: ['html',
-//             'css',
-//             'js',
-//             'mysql',
-//             'mongodb',
-//             'react',
-//             'angular',
-//             'aws',
-//             'docker',
-//             'git',
-//             'node.js',
-//             'python',
-//             'java']
-//     },
-//     {
-//         title: 'Frontend',
-//         monthDuration: 4,
-//         hourDuration: 909,
-//         modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
-//     }
-// ];
-//
+const coursesArray = [
+    {
+        title: 'JavaScript Complex',
+        monthDuration: 5,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js']
+    },
+    {
+        title: 'Java Complex',
+        monthDuration: 6,
+        hourDuration: 909,
+        modules: ['html',
+            'css',
+            'js',
+            'mysql',
+            'mongodb',
+            'angular',
+            'aws',
+            'docker',
+            'git',
+            'java core',
+            'java advanced']
+    },
+    {
+        title: 'Python Complex',
+        monthDuration: 6,
+        hourDuration: 909,
+        modules: ['html',
+            'css',
+            'js',
+            'mysql',
+            'mongodb',
+            'angular',
+            'aws',
+            'docker',
+            'python core',
+            'python advanced']
+    },
+    {
+        title: 'QA Complex',
+        monthDuration: 4,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'git', 'QA/QC']
+    },
+    {
+        title: 'FullStack',
+        monthDuration: 7,
+        hourDuration: 909,
+        modules: ['html',
+            'css',
+            'js',
+            'mysql',
+            'mongodb',
+            'react',
+            'angular',
+            'aws',
+            'docker',
+            'git',
+            'node.js',
+            'python',
+            'java']
+    },
+    {
+        title: 'Frontend',
+        monthDuration: 4,
+        hourDuration: 909,
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'sass']
+    }
+];
+
 // Створити для кожного елементу масиву свій блок, блок розділити блоками, в яких будуть зберігатись значення окремих властивостей, для властивості modules зробити список з елементами
 // Приклад структири знаходиться у файлі example.png який лежить в папці з поточним фйлом
 
-// const coursesContainer = document.createElement('div');
-// coursesContainer.classList.add('courses-container');
-//
-// for (const course of coursesArray) {
-//     const courseBlock = document.createElement('div');
-//     courseBlock.classList.add('course-block');
-//
-//     const titleElement = document.createElement('h2');
-//     titleElement.textContent = course.title;
-//
-//     const durationElement = document.createElement('p');
-//     durationElement.textContent = `Duration: ${course.monthDuration} months`;
-//
-//     const hourDurationElement = document.createElement('p');
-//     hourDurationElement.textContent = `Hour Duration: ${course.hourDuration} hours`;
-//
-//     const modulesContainer = document.createElement('ul');
-//     modulesContainer.classList.add('modules-container');
-//
-//     for (const module of course.modules) {
-//         const moduleItem = document.createElement('li');
-//         moduleItem.textContent = module;
-//         modulesContainer.appendChild(moduleItem);
-//     }
-//
-//     courseBlock.appendChild(titleElement);
-//     courseBlock.appendChild(durationElement);
-//     courseBlock.appendChild(hourDurationElement);
-//     courseBlock.appendChild(modulesContainer);
-//
-//     coursesContainer.appendChild(courseBlock);
-// }
-//
-// document.body.appendChild(coursesContainer);
+for (const module of coursesArray) {
+    for (const item of coursesArray) {
+        const block = document.createElement('div');
+        const title = document.createElement('h1');
+        const duration = document.createElement('div');
+        const month = document.createElement('div');
+        const hour = document.createElement('div');
+        const ul = document.createElement('ul');
+
+        title.innerText = item.title;
+        month.innerText = item.monthDuration;
+        hour.innerText = item.hourDuration;
+
+        for (const module of item.modules) {
+            const li = document.createElement('li');
+            li.innerText = module;
+            ul.appendChild(li);
+        }
+
+        block.classList.add('main');
+        duration.classList.add('flex');
+        month.classList.add('growM');
+        hour.classList.add('growH');
+        title.classList.add('title');
+        duration.classList.add('duration');
+
+
+        document.body.appendChild(block);
+        block.append(title, duration, ul);
+        duration.append(month, hour);
+    }
+}
 
 // ___________________________________________________________________________________
