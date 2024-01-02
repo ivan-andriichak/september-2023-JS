@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .form {
+            width: 50%;
+            margin: 0 auto;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #faf6df;
+            border-radius: 10px;
+        }
+
+        button {
+            margin: 0 auto;
+            width: 85px;
+            padding: 5px;
+            border-radius: 5px;
+            border-color: #f5f1f1;
+        }
+
+        input[type="text"], [type = "number"] {
+            background-color: #f8eee3;
+            color: #333;
+            border: 1px solid #b4b3b3;
+            border-radius: 5px;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        div {
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+<body>
+<div class="form">
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <div><input type="text" id="name" name="name" required><br><br></div>
+
+        <label for="surname">Surname:</label>
+        <div><input type="text" id="surname" name="surname" required><br><br></div>
+
+        <label for="age">Age:</label>
+        <div><input type="number" id="age" name="age" required><br><br></div>
+
+        <button type="button" id="submitBtn">Submit</button>
+        <button type="button" id="clearBtn">Clear</button>
+    </form>
+
+    <div id="resultBlock"></div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
